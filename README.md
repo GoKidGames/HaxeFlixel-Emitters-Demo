@@ -2,7 +2,7 @@
 
 Demo using static emitters.
 
-Emitters are public static vars defined in class Emitters.hx which also contains staic functions to emit on objects, particles or points.
+Emitters are public static vars defined in class Emitters.hx which also contains static functions to emit on objects, particles or points.
 
 Example usage:
 
