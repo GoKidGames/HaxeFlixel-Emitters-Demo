@@ -17,7 +17,9 @@ class PlayState extends FlxState
 	private var _info:FlxText;
 	
 	override public function create():Void
-	{	
+	{
+		FlxG.mouse.useSystemCursor = true;
+		
 		var buttonLabels:Array<String> = [
 			"Arc",
 			"Coin",
@@ -128,9 +130,9 @@ class PlayState extends FlxState
 			case "Rain":
 				
 				if (_targetPlayer)
-					Emitters.explode(Emitters.rain, _player, 50);
+					Emitters.explode(Emitters.rain, _player, 20);
 				else
-					Emitters.explodePoint(Emitters.rain, _point, 50);
+					Emitters.explodePoint(Emitters.rain, _point, 20);
 				
 				_info.text = "Rain is using a makeGraphic for the particles.";
 				
