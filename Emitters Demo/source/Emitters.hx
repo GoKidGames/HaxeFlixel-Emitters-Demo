@@ -8,9 +8,8 @@ import flixel.group.FlxGroup;
 import flixel.math.FlxPoint;
 
 /**
- * Emitters - A FlxGroup of public static emitters.
+ * Emitters - A FlxGroup with public static emitters. 
  * Can be used anywhere with Emitters.explode(Emitters.gibs), for example.
- * You can define and add more emitters in this class as needed.
  * @author Dean
  */
 class Emitters extends FlxGroup
@@ -32,6 +31,7 @@ class Emitters extends FlxGroup
 		arc.speed.set(64);
 		arc.alpha.set(1, 1, 0, 0);
 		arc.lifespan.set(2.0);
+		add(arc);
 		
 		coins = new FlxEmitter();
 		coins.drag.set(32);
@@ -39,12 +39,13 @@ class Emitters extends FlxGroup
 		coins.maxSize = 50;
 		for (i in 0...coins.maxSize)
 			coins.add(new Coin());
+		add(coins);
 		
 		gibs = new FlxEmitter().loadParticles("assets/images/gibs.png", 50, 16, true);
-		gibs.launchMode = FlxEmitterMode.SQUARE;
 		gibs.scale.set(0.25, 0.25, 1, 1);
 		gibs.alpha.set(1, 1, 0, 0);
 		gibs.lifespan.set(1);
+		add(gibs);
 		
 		rain = new FlxEmitter().loadParticles(new FlxSprite().makeGraphic(2, 2, 0xFF0066CC).graphic, 100);
 		rain.launchMode = FlxEmitterMode.SQUARE;
@@ -52,12 +53,14 @@ class Emitters extends FlxGroup
 		rain.acceleration.set(-20, 20, 20, 40);
 		rain.alpha.set(1, 1, 0, 0);
 		rain.lifespan.set(2.0);
+		add(rain);
 		
 		ring = new FlxEmitter().loadParticles(new FlxSprite().makeGraphic(2, 2, 0xFFFFCC00).graphic, 100);
 		ring.launchMode = FlxEmitterMode.CIRCLE;
 		ring.speed.set(64);
 		ring.alpha.set(1, 1, 0, 0);
 		ring.lifespan.set(2.0);
+		add(ring);
 
 		smoke = new FlxEmitter().loadParticles("assets/images/smoke.png", 100, 16, true);
 		smoke.launchMode = FlxEmitterMode.SQUARE;
@@ -66,12 +69,6 @@ class Emitters extends FlxGroup
 		smoke.scale.set(1, 1, 1, 1, 2, 3);
 		smoke.alpha.set(1, 1, 0, 0);
 		smoke.lifespan.set(3.0);
-		
-		add(arc);
-		add(coins);
-		add(gibs);
-		add(rain);
-		add(ring);
 		add(smoke);
 	}
 	
