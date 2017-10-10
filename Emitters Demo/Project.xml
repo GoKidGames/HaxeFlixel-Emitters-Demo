@@ -2,9 +2,9 @@
 <project>
 	<!------------------------------APPLICATION SETTINGS---------------------------->
 	
-	<meta title="Emitter Demo" package="com.gokidgames.EmitterDemo" version="0.1.0" company="GoKid Games" />
+	<meta title="Emitters Demo" package="com.gokidgames.EmittersDemo" version="0.1.0" company="GoKid Games" />
 	
-	<app title="Emitter Demo" file="Emitter Demo" main="Main" version="0.1.0" company="GoKid Games" />
+	<app title="Emitters Demo" file="EmittersDemo" main="Main" version="0.1.0" company="GoKid Games" />
 	
 	<!-- The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 	<!-- or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal" -->
@@ -23,7 +23,7 @@
 	
 	<!--------------------------------PATHS SETTINGS-------------------------------->
 	
-	<set name="BUILD_DIR" value="export" />
+	<set name="BUILD_DIR" value="export2" />
 	<classpath name="source" />
 	
 	<assets path="assets/images" include="*" />
