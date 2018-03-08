@@ -81,9 +81,6 @@ class Emitters extends FlxGroup
 	 */
 	public static function emit(emitter:FlxEmitter, object:FlxObject, frequency:Float = 0.1, quantity:Int = 0):Void
 	{
-		if (emitter == null || object == null)
-			return;
-			
 		emitter.focusOn(object);
 		emitter.start(false, frequency, quantity);
 	}
@@ -96,9 +93,6 @@ class Emitters extends FlxGroup
 	 */
 	public static function explode(emitter:FlxEmitter, object:FlxObject, quantity:Int = 0):Void 
 	{
-		if (emitter == null || object == null)
-			return;
-		
 		emitter.focusOn(object);
 		emitter.start(true, 0.1, quantity);
 	}
@@ -112,9 +106,6 @@ class Emitters extends FlxGroup
 	 */
 	public static function emitOnParticle(emitter:FlxEmitter, particle:FlxParticle, frequency:Float = 0.1, quantity:Int = 0):Void
 	{
-		if (emitter == null || particle == null)
-			return;
-		
 		var midPoint = particle.getMidpoint();
 		
 		emitter.setPosition(midPoint.x, midPoint.y);
@@ -129,9 +120,6 @@ class Emitters extends FlxGroup
 	 */
 	public static function explodeParticle(emitter:FlxEmitter, particle:FlxParticle, quantity:Int = 0):Void 
 	{
-		if (emitter == null || particle == null)
-			return;
-		
 		var midPoint = particle.getMidpoint();
 		
 		emitter.setPosition(midPoint.x, midPoint.y);
@@ -146,9 +134,6 @@ class Emitters extends FlxGroup
 	 */
 	public static function explodePoint(emitter:FlxEmitter, point:FlxPoint, quantity:Int = 0):Void 
 	{
-		if (emitter == null || point == null)
-			return;
-		
 		emitter.setPosition(point.x, point.y);
 		emitter.start(true, 0.1, quantity);
 	}
@@ -162,9 +147,6 @@ class Emitters extends FlxGroup
 	 */
 	public static function emitPoint(emitter:FlxEmitter, point:FlxPoint, frequency:Float = 0.1, quantity:Int = 0):Void
 	{
-		if (emitter == null || point == null)
-			return;
-		
 		emitter.setPosition(point.x, point.y);
 		emitter.start(false, frequency, quantity);
 	}
