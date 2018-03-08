@@ -11,7 +11,7 @@ Add to PlayState#create() to create the emitters and add them. (Emitters.hx exte
 
 <code>var emitters = new Emitters();</code>
 
-<code>add(_emitters);</code>
+<code>add(emitters);</code>
 
 
 Now you can use them anywhere in your code.
